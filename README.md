@@ -1,22 +1,17 @@
-# SimpleGamesCollection
-This project is a collection of various simple games for private use only. They will stay free as long as they remain inside this repository. Feel free to re-use the code or to extend each game with your own features.
+:date: The work on this project will approximately start in February 2018. Until that this repository will likely be untouched.
 
-## Hack Slash Crawl like game for mobile devices and PC
-You are playing a dungeon master, who is trying to reach the last floor. Try to level up by killing monsters and looting chests. Defeat the final boss and become a hero of the dungeon world.
-#### :trophy: Planned Features
-  * support for multiple profiles
-  * random map creation
-  * character customization
-  * level system
-  * economy system
-#### :computer: Graphics
-  * 2.5D or 3D game
-  * comic like graphics
-#### :bell: Audio
-  * music is playing everywhere
-  * sound effects for all in-game actions
-#### :bulb: Menus
-  * inventory/character menu for customizing your items
-  * pause menu for saving the game, loading an old game, opening the settings menu or quitting the game
-  * settings menu for audio, graphic and key-binding settings
-  * main menu
+## About this project
+This project is a collection of various simple games for private use only. Feel free to re-use the code or to extend each game with your own features. 
+
+## :video_game: Hack'n'Slay
+You are playing a dungeon master, who is trying to reach the last floor. Try to level up by killing monsters and looting chests. Defeat the final boss and become the hero of the dungeon world.
+
+This game will be a port of the flash game [Hack Slash Crawl](http://www.fettspielen.de/spiel/hack-slash-crawl) for mobile and desktop devices. Following features are planned:
+
+Category   | Planned features
+---------- | -----------------
+Gameplay   | <ul><li>support for multiple profiles</li><li>random map creation</li><li>character customization</li><li>level system</li><li>economy system</li></ul>
+Graphics   | <ul><li>2.5D or 3D</li><li>comic like graphics</li></ul>
+Audio      | <ul><li>variety of different songs</li><li>random song selection</li><li>soundeffects for all in-game actions</li></ul>
+Interfaces | <ul><li>inventory/character interface for customizing your character</li><li>pause menu for saving, reloading, changing settings</li><li>map interface</li><li>settings menu for audio, graphics and key-bindings</li><li>main menu</li></ul>
+
