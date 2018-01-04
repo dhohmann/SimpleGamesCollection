@@ -15,3 +15,5 @@ Graphics   | <ul><li>2.5D or 3D</li><li>comic like graphics</li></ul>
 Audio      | <ul><li>variety of different songs</li><li>random song selection</li><li>soundeffects for all in-game actions</li></ul>
 Interfaces | <ul><li>inventory/character interface for customizing your character</li><li>pause menu for saving, reloading, changing settings</li><li>map interface</li><li>settings menu for audio, graphics and key-bindings</li><li>main menu</li></ul>
 
+## Cookie Clicker
+Did you tried to open the site of the game Cookie Clicker on your mobile phone? It is a mess! So we are planning to reprogram a for mobile devices optimized version of the well-known game. 
