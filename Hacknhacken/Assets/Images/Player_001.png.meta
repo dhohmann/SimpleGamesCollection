@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Hacknhacken/Assets/Images/Player_001.png.meta
 guid: b81cdd3157b37834098a2b8c1dff8426
 timeCreated: 1520686168
+=======
+guid: a171527269277bc48a9618fb58fe88d6
+timeCreated: 1520682483
+>>>>>>> origin/master:Hacknhacken/Assets/Images/Smiley_2.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
