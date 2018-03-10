@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    private static Vector2 RIGHT = new Vector2(1, 1).normalized;
+    private static Vector2 UP = new Vector2(-1, 1).normalized;
+
     public float moveSpeed = 1.0f;
     public GameObject player;
 
@@ -18,20 +21,20 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A))
         {
-            movement += (new Vector2(-1, 0) * moveSpeed);
+            movement += (RIGHT * (-1) * moveSpeed);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            movement += (new Vector2(1, 0) * moveSpeed);
+            movement += (RIGHT * moveSpeed);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            movement += (new Vector2(0, 1) * moveSpeed);
+            movement += (UP * moveSpeed);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            movement += (new Vector2(0, -1) * moveSpeed);
+            movement += (UP * (-1) * moveSpeed);
         }
 
         player.transform.position += new Vector3(movement.x, movement.y, 0.0f);
