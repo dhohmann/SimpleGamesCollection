@@ -2,41 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+    private Vector2 up;
+    private Vector2 left;
 
-    private static Vector2 RIGHT = new Vector2(1, 1).normalized;
-    private static Vector2 UP = new Vector2(-1, 1).normalized;
+    private Movement movementData = Movement.zero;
 
-    public float moveSpeed = 1.0f;
-    public GameObject player;
+    // Use this for initialization
+    void Start()
+    {
+        if (!Rotation.Initialized)
+        {
+            Rotation.Init();
+        }
+        Debug.Assert(Rotation.Initialized, "Rotation is not initialized");
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        up = Vector2.up.Rotate(Rotation.Degree);
+        up.Normalize();
+
+        left = Vector2.left.Rotate(Rotation.Degree);
+        left.Normalize();
+
+        EntityData data = gameObject.GetComponent<EntityData>();
+        Debug.Assert(data != null, "Player requires entity data");
+
+        if(data != null)
+        {
+            movementData = data.movement;
+        }
+        
+}
+
+    // Update is called once per frame
+    void Update()
+    {
+        float moveSpeed = movementData.speed;
         Vector2 movement = new Vector2(0.0f, 0.0f);
 
         if (Input.GetKey(KeyCode.A))
         {
-            movement += (RIGHT * (-1) * moveSpeed);
+            movement += (left * moveSpeed);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            movement += (RIGHT * moveSpeed);
+            movement += (left * (-1) * moveSpeed);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            movement += (UP * moveSpeed);
+            movement += (up * moveSpeed);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            movement += (UP * (-1) * moveSpeed);
+            movement += (up * (-1) * moveSpeed);
         }
 
-        player.transform.position += new Vector3(movement.x, movement.y, 0.0f);
+        gameObject.transform.position += new Vector3(movement.x, movement.y, 0.0f);
     }
 }
